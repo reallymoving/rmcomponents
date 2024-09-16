@@ -1,5 +1,5 @@
 {
-  "name": "rmcomponents",
+  "name": "@reallymoving/rmcomponents",
   "version": "0.1.49",
   "scripts": {
     "start": "react-scripts start",
@@ -98,7 +98,11 @@
   "main": "",
   "module": "dist/esm/index.js",
   "publishConfig": {
-    "registry": "https://reallymoving.pkgs.visualstudio.com/reallymoving/_packaging/ReallyMovingTools/npm/registry/"
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reallymoving/rmcomponents"
   },
   "sideEffects": false,
   "readme": "ERROR: No README data found!",
