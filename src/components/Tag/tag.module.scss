@@ -1,27 +1,23 @@
 @import '../../global/styles/vars';
-//@import '../../global/styles/fonts';
 
 .tag {
     color: #000;
     font-size: .875em;
     font-weight: 400;
     display: flex;
-    svg {
-        font-size: 3.2rem;
-    }
     p {
         display: flex;
         align-items: center;
         margin: 0 0 3px 10px;
         font-family: Arial, Helvetica, sans-serif;
         text-transform: capitalize;
-        // &::before {
-        //     content: "";
-        //     display: inline-block;
-        //     font-family: 'icomoon-icon-fonts';
-        //     font-size: 3.5rem;
-        //     margin-right: 5px;
-        //     vertical-align: middle;
-        // }
+        &::before {
+            content: "";
+            display: inline-block;
+            font-family: 'icomoon-icon-fonts';
+            font-size: 3.5rem;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
     }
 }

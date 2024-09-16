@@ -9,35 +9,52 @@ import svgr from '@svgr/rollup';
 import url from '@rollup/plugin-url';
 import copy from 'rollup-plugin-copy';
 
-export default {
-    input: './src/index.js',
+import glob from 'glob';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
+export default {
+    input: Object.fromEntries(
+        ['components'].flatMap(folder =>
+            glob.sync(`src/${folder}/*/*.js`)
+                .filter(file => !file.includes('test') && !file.includes('stories') && !path.basename(file).startsWith('index.')) // Exclude files with "test", "stories", and "index.js" in the name
+                .map(file => [
+                    // This gets the JavaScript filename without the path and extension
+                    path.basename(file, path.extname(file)),
+                    // This expands the relative paths to absolute paths, so e.g.
+                    // src/nested/foo.js becomes /project/src/nested/foo.js
+                    fileURLToPath(new URL(file, import.meta.url))
+                ])
+        )
+    ),
     output: [
         {
-            name: 'comlib',
-            sourcemap: true,
-            file: './dist/build/index.js',
-            format: 'cjs',
-            globals: { react: 'React' },
+            dir: './publish/dist/esm',
+            format: 'es',
+            entryFileNames: '[name].js',
+            exports: 'named'
         },
         {
-            file: './dist/build/index.es.js',
-            format: 'es',
-            exports: 'named',
-        }
+            dir: './publish/dist/cjs',
+            format: 'cjs',
+            entryFileNames: '[name].js',
+            exports: 'auto'
+        },
     ],
 
     plugins: [
+        //exclude peer depenenciesb 
         peerDepsExternal(),
         postcss({
-            extract: false,
-            modules: true,
+            extract: 'rmcomponents.css',
+            minimize: true,
             use: ['sass'],
         }),
         babel({ 
             exclude: 'node_modules/**',
             presets: ['@babel/preset-react']
         }),
+        //reslolves 3rd party libraries
         resolve(),
         commonjs(),
         image(),
@@ -49,7 +66,7 @@ export default {
         }),
         copy({
             targets: [
-                {src: 'src/global/fonts/*', dest: 'dist/fonts'}
+                {src: './indexcopy.js', dest: 'publish/dist/esm/', rename: 'index.js'}
             ]
         })
     ],

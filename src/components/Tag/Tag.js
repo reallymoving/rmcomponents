@@ -1,20 +1,18 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styles from "./tag.module.scss";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTag } from '@fortawesome/free-solid-svg-icons'
 
 const Tag = props => {
     return ( 
-        <div className={styles.tag}>
-            <FontAwesomeIcon icon={faTag} />
+        <div className={`${styles.tag} ${props.className ? props.className : ''}`}>
             <p>{props.tag}</p>
         </div>
      );
 }
 
 Tag.propTypes = {
-   tag: PropTypes.string
+   tag: PropTypes.string,
+   className: PropTypes.string
 }
  
 export default Tag;

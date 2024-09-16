@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../src/global/styles/fonts.scss';
 import './global.css'
 
 export const parameters = {

@@ -1,6 +1,6 @@
 {
   "name": "rmcomponents",
-  "version": "0.1.34",
+  "version": "0.1.49",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -11,7 +11,8 @@
     "storybook-docs": "start-storybook --docs --no-manager-cache",
     "build-storybook": "build-storybook public",
     "rollup-build": "rollup -c",
-    "chromatic": "npx chromatic --project-token=067f0fc01d2c"
+    "chromatic": "npx chromatic --project-token=067f0fc01d2c --exit-zero-on-changes",
+    "pre-publish": "powershell -ExecutionPolicy Bypass -File publish.ps1 & npm run rollup-build"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -94,14 +95,12 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "main": "dist/build/index.js",
-  "module": "dist/build/index.es.js",
-  "files": [
-    "dist"
-  ],
+  "main": "",
+  "module": "dist/esm/index.js",
   "publishConfig": {
     "registry": "https://reallymoving.pkgs.visualstudio.com/reallymoving/_packaging/ReallyMovingTools/npm/registry/"
   },
+  "sideEffects": false,
   "readme": "ERROR: No README data found!",
   "_id": "rmcomponents@0.1.1",
   "dependencies": {

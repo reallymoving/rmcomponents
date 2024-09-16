@@ -4,7 +4,13 @@ import PropTypes from "prop-types"
 
 const Nav = props => {
     return ( 
-            <ul className={`${props.customClass ? props.customClass : null} ${styles.nav}`}>{props.children}</ul>
+            <ul 
+            className={`${props.customClass ? props.customClass : null} 
+            ${styles.nav}`}
+            aria-labelledby={props.ariaLabelledBy ? props.ariaLabelledBy : null} 
+            >
+                {props.children}
+            </ul>
      );
 }
 

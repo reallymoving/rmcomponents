@@ -4,7 +4,7 @@ import styles from "./Pagination.module.scss"
 
 const Pagination = ({children}) => {
     return ( 
-        <ul className={styles.pagination}>{children}</ul>
+        <ul aria-label="Pagination" className={styles.pagination}>{children}</ul>
      );
 }
 

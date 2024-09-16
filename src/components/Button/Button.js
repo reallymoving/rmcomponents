@@ -1,3 +1,4 @@
+"use client"
 import React from "react"
 import PropTypes from "prop-types"
 import styles from "./button.module.scss"
@@ -49,7 +50,7 @@ const Button = props => {
         aria-controls={props.ariaControls ? props.ariaControls : null}
         aria-expanded={props.ariaExpanded ? props.ariaExpanded : null}
         aria-haspopup={props.ariaHasPopup ? props.ariaHasPopup : null}
-        aria-label={props.ariaLabel ? props.ariaLabel : null}
+        aria-label={props.ariaLabel ? props.ariaLabel : props.label}
         aria-labelledby={props.ariaLabelledBy ? props.ariaLabelledBy : null}
         >
                 <span className={`${btnColor} ${btnSize}`}>

@@ -3,14 +3,19 @@ import styles from './crumb.module.scss'
 import PropTypes from "prop-types"
 
 const Crumb = props => {
+    let Props = {}
+
+    props.ariaCurrent ? Props['aria-current'] = props.ariaCurrent : null
+
     return ( 
-        <li id={props.id} className={`${styles.crumb} ${props.customClass ? props.customClass : ''}`}><a href={props.link}>{props.children}</a></li>
+        <li id={props.id} className={`${styles.crumb} ${props.className ? props.className : ''}`} {...Props}>{props.children}</li>
      );
 }
 
 Crumb.propTypes = {
     id: PropTypes.string,
-    customClass: PropTypes.string
+    className: PropTypes.string,
+    ariaCurrent: PropTypes.string
 }
 
 export default Crumb;

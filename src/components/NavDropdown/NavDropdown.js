@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import styles from './NavDropdown.module.scss'
 import '../../global/styles/global.scss'
@@ -23,7 +24,7 @@ const NavDropdown = props => {
         }
     }
     return ( 
-        <li className={styles.NavDropdown}>
+        <li key={props.key ? props.key : 0} className={styles.NavDropdown}>
             <a onClick={openDropdown} className={props.icon === 'down' ? styles.iconDown : styles.iconRight}>{props.title}</a>
             <ul className={styles.dropdown}>{props.children}</ul>
         </li>
