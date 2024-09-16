@@ -1,0 +1,66 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+
+import NavBar from './NavBar'
+import Nav from '../Nav'
+import NavLink from '../NavLink'
+import NavDropdown from '../NavDropdown'
+import NavCollapse from '../NavCollapse'
+import DropdownItem from '../DropdownItem'
+import NavToggle from '../NavToggle'
+import HeaderSimple from '../HeaderSimple'
+import Button from '../Button'
+
+<Meta 
+    title="Components/Navigation/Navbar" 
+    component={NavBar}
+    argTypes={{
+    theme: {
+        description: 'Set a color theme, adds a class.',
+        options: ['light', 'purple'],
+        control: 'radio'
+    },
+  }}
+/>
+
+export const Template = args => 
+<NavBar {...args}>
+    <NavToggle navid='mainNav' />
+    <NavCollapse id='mainNav' bp='md' bg='452765'>
+        <Nav>
+            <NavLink href='#'>Link</NavLink>
+            <NavLink href='#'>Link</NavLink>
+            <NavDropdown title='dropdown' icon='down'>
+                <DropdownItem href='#'>dropdown item</DropdownItem>
+                <DropdownItem href='#'>dropdown item</DropdownItem>
+                <DropdownItem href='#'>dropdown item</DropdownItem>
+                <NavDropdown title='dropdown' icon='right'>
+                    <DropdownItem href='#'>dropdown item</DropdownItem>
+                    <DropdownItem href='#'>dropdown item</DropdownItem>
+                    <DropdownItem href='#'>dropdown item</DropdownItem>
+                </NavDropdown>
+            </NavDropdown>
+            <Button label='Button' size='xs' />
+        </Nav>
+    </NavCollapse>
+</NavBar>
+
+<HeaderSimple title='Navbar' />
+
+## Overview
+
+Navbars allow users to navigate the website.
+
+<Canvas>
+    <Story
+    name = "Overview"
+    args = {{
+        children: 'nav',
+        theme: 'purple'
+    }}>
+        { Template.bind({}) }
+    </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable story="Overview" />

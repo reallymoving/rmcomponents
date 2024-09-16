@@ -1,0 +1,65 @@
+@import '../../global/styles/vars';
+@import '../../global/styles/fonts';
+
+@mixin listicon {
+    font-size: 1.6rem;
+    display: inline-block;
+    font-family: 'icomoon-icon-fonts';
+    font-weight: bold;
+    padding-left: 0;
+    vertical-align: top;
+    font-size: 1.5rem;
+}
+
+.list {
+    list-style-type: none;
+    padding-left: 0px;
+    li {
+        display: flex;
+        div:first-child {
+            padding: 0px 10px 5px 10px;
+        }
+        padding: 5px 10px;
+        *:nth-child(1) {
+            display: inline-block;
+            margin-top: 0;
+        }
+        h2 {
+            margin: 0;
+        }
+        &::before {
+            @include listicon();
+        }
+    }
+}
+.pink li::before {
+    @include listicon();
+    content: "";
+    color: $rm-pink;
+}
+.green li::before {
+    @include listicon();
+    content: "";
+    color: $rm-mid-green;
+}
+.pinkBullet li::before {
+    @include listicon();
+    color: $rm-pink;
+    content: "⬤";
+    font-size: 1rem;
+    margin-top: 2px;
+}
+.pinkChevron li::before {
+    @include listicon();
+    color: $rm-pink;
+    content: "";
+    font-family: 'icomoon-icon-fonts';
+    font-size: 1.6rem;
+}
+.pinkX li::before {
+    @include listicon();
+    color: $rm-pink;
+    content: "X";
+    font-size: 1.6rem;
+    font-family: 'Roboto';
+}

@@ -1,0 +1,101 @@
+@import '../../global/styles/mixins';
+@import '../../global/styles/vars';
+
+.bottomBar {
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 4px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 100;
+    border-top: 2px solid #e6e3ec;
+    background: #f8f8f8;
+    display: none;
+    left: 0;
+    @include breakpoint('md') {
+        display: block;
+    }
+    .text {
+        color: #666;
+        font-size: 14px;
+        font-weight: 500;
+        padding-top: 5px;
+        text-align: center;
+}
+}
+
+.getQuotesBtn {
+    display: block;
+    margin: 0 auto;
+    span {
+            border: 1px solid #452765;
+            color: #452765;
+            border-radius: 100%;
+            height: 45px;
+            width: 45px;
+            padding: 10px 0;
+            font-weight: 500;
+            pointer-events: none;
+            background: transparent !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'icomoon-icon-fonts' !important;
+            //speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+                font-size: 35px;
+                    margin-left: 1px;
+            &:before {
+                content: "";
+                font-weight: lighter;
+                font-size: 35px;
+            }
+    }
+}
+
+.active span {
+    background: $rm-purple !important;
+    color: #fff;
+}
+.mobQuoteNav {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 10;
+    ul {
+        padding: 10px;
+        background-color: #fff;
+        width: fit-content;
+        position: absolute;
+        //position: fixed;
+        bottom: 82px;
+        z-index: 11;
+        margin: auto;
+        left: 50%;
+        transform: translate(-50%);
+        li {
+            &:first-of-type {
+                font-weight: 700;
+                padding-top: 0;
+            }
+            div:first-child {
+                padding-bottom: 0;
+            }
+            border-bottom: 1px solid #f8f8f8;
+            padding: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            font-weight: lighter;
+            color: #333 !important;
+        }
+    }
+}

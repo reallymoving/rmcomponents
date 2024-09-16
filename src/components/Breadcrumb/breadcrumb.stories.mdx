@@ -1,0 +1,43 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+
+import Breadcrumb from './Breadcrumb'
+import Crumb from '../Crumb'
+import HeaderSimple from '../HeaderSimple'
+
+<Meta 
+    title="Components/Breadcrumb/Breadcrumb" 
+    component={Breadcrumb}
+    argTypes={{
+    Breadcrumb: {
+        description: 'Text to go in Breadcrumb'
+    }
+  }}
+/>
+
+export const Template = args => (
+    <Breadcrumb {...args}>
+        <Crumb>Home</Crumb>
+        <Crumb>Conveyancing</Crumb>
+        <Crumb>Partners</Crumb>
+    </Breadcrumb>
+)
+
+<HeaderSimple title='Breadcrumb' />
+
+## Overview
+
+Breadcrumbs help users navigate the site.
+
+<Canvas>
+    <Story
+    name = "Overview"
+    args = {{
+        Breadcrumb: 'Home, removals'
+    }}>
+        { Template.bind({}) }
+    </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable story="Overview" />

@@ -1,0 +1,38 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+
+import Pagination from './Pagination'
+import Page from '../Page'
+import HeaderSimple from '../HeaderSimple'
+
+<Meta 
+    title="Components/Pagination/Pagination" 
+    component={Pagination}
+/>
+
+export const Template = args => (
+    <Pagination {...args}>
+        {[...Array(5).keys()].map(item => <Page>{item + 1}</Page>)}
+        <Page>Next</Page>
+        <Page>Last</Page>
+    </Pagination>
+) 
+
+<HeaderSimple title='Pagination' />
+
+## Overview
+
+Pagination component to be used to navigate separate pages.
+
+<Canvas>
+    <Story
+    name = "Overview"
+    args = {{
+        children: 'Pagination'
+    }}>
+        { Template.bind({}) }
+    </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable story="Overview" />

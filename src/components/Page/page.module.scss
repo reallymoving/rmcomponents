@@ -1,0 +1,19 @@
+.page {
+    display: inline;
+
+    a {
+        background-color: #fff;
+        border: 1px solid #e6e6e6;
+        color: #1c1c1c;
+        font-weight: 500;
+        padding: 16px 21px;
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif;
+
+        &:hover {
+            background-color: #452765;
+            border-color: #452765;
+            color: #fff;
+        }
+    }
+}

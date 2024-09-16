@@ -1,0 +1,44 @@
+@import '../../global/styles/vars';
+@import '../../global/styles/mixins';
+
+.navbar {
+    border: 1px solid #000;
+}
+
+//purple theme
+.navbar.purple {
+    background-color: $rm-purple;
+    border: none;
+    a {
+        color: #fff !important;
+        text-transform: capitalize;
+        font-weight: 700;
+        &:hover {
+            background-color: $rm-pink;
+        }
+        @include breakpoint('md') {
+            &:hover {
+                background-color: $rm-purple;
+            }
+        }
+    }
+    li ul { //dropdown
+        background-color: $rm-lilac;
+        color: #000;
+        @include breakpoint('md') {
+            background-color: $rm-purple;
+            position: static;
+        }
+        border: none;
+        a {
+            color: #000 !important;
+            @include breakpoint('md') {
+                color: #fff !important;
+            }
+            font-weight: 500;
+            &:hover {
+                color: #fff !important;
+            }
+        }
+    }
+}

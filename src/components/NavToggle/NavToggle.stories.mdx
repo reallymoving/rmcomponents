@@ -1,0 +1,33 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+
+import NavToggle from './NavToggle'
+import HeaderSimple from '../HeaderSimple'
+
+<Meta 
+    title="Components/Navigation/NavToggle" 
+    component={NavToggle}
+/>
+
+export const Template = args => (
+    <NavToggle {...args} />
+) 
+
+<HeaderSimple title='NavToggle' />
+
+## Overview
+
+NavToggle component to be used to open a mobile nav.
+
+<Canvas>
+    <Story
+    name = "Overview"
+    args = {{
+        navid: 'NavToggle'
+    }}>
+        { Template.bind({}) }
+    </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable story="Overview" />

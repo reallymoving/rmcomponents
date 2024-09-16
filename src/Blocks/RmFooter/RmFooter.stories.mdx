@@ -1,0 +1,34 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+
+import RmFooter from './RmFooter'
+import HeaderSimple from '../../components/HeaderSimple'
+import links from './nav.json'
+
+<Meta 
+    title="Blocks/RmFooter" 
+    component={RmFooter}
+/>
+
+export const Template = args => (
+    <RmFooter {...args}></RmFooter>
+) 
+
+<HeaderSimple title='RmFooter' />
+
+## Overview
+
+Main Footer of the site.
+
+<Canvas>
+    <Story
+    name = "Overview"
+    args = {{
+        nav: links
+    }}>
+        { Template.bind({}) }
+    </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable story="Overview" />

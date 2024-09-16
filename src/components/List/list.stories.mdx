@@ -1,0 +1,48 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+
+import List from './List'
+import ListItem from '../ListItem'
+import HeaderSimple from '../HeaderSimple'
+
+<Meta 
+    title="Components/List/List" 
+    component={List}
+    argTypes={{
+        id: {
+            description: 'Give the list an id'
+        },
+        type: {
+            description: 'Type of list',
+            options: ['pink', 'green', 'pinkbullet', 'pinkchevron', 'pinkx'],
+            control: { type: 'radio' },
+        }
+  }}
+/>
+
+export const Template = args => (
+    <List {...args}>
+        <ListItem>Conveyancing</ListItem>
+        <ListItem>Surveyors</ListItem>
+        <ListItem>Removals</ListItem>
+    </List>
+) 
+
+<HeaderSimple title='List' />
+
+## Overview
+
+Lists is a group of actionable items containing primary and supplemental actions, which are represented by icons and text.
+
+<Canvas>
+    <Story
+    name = "Overview"
+    args = {{
+        type: 'pink'
+    }}>
+        { Template.bind({}) }
+    </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable story="Overview" />

@@ -1,0 +1,71 @@
+@import '../../global/styles/vars';
+
+.btn {
+    border: none;
+    width: auto;
+    padding: 0;
+    background: transparent;
+    margin: 0.25rem 0.125rem;
+    //margin: 12px 0 16px 0;
+    span {
+        font-size: 19px;
+        font-weight: 700;
+        padding: 15px 20px;
+        display: block;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        border: none;
+        color: #fff;
+        white-space: normal;
+    }
+    a {
+        text-decoration: none;
+    }
+    .primary {
+        background: -webkit-linear-gradient(top, #f70e92, #c40069);
+        &:hover {
+            background: -webkit-linear-gradient(top, #e40884, #ab005b);
+        }
+    }
+    .secondary {
+        background: -webkit-linear-gradient(top, #999999, #4b4b4b);
+        &:hover {
+            background: -webkit-linear-gradient(top, #1b1b1b, #2b2b2b);
+        }
+    }
+    .trans {
+        background: transparent;
+        border: 2px solid #452765;
+        border-radius: 5px;
+        padding: 10px;
+        color: #666 !important;
+        font-weight: 500 !important;
+        &:hover {
+            background: #ededed;
+            color: $rm-purple !important;
+        }
+    }
+    .account {
+        background: -webkit-linear-gradient(top, #1ace9b, #17b489);
+        min-width: 140px;
+    }
+}
+
+.lg {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    padding: 17px 30px 20px !important;
+}
+
+.sm {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    padding: 10px 20px !important;
+}
+
+.xs {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    padding: 6px 20px !important;
+}

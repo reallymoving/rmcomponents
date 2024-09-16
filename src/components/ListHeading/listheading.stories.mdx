@@ -1,0 +1,33 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+
+import ListHeading from './ListHeading'
+import HeaderSimple from '../HeaderSimple'
+
+<Meta 
+    title="Components/List/ListHeading" 
+    component={ListHeading}
+/>
+
+export const Template = args => (
+    <ListHeading {...args}></ListHeading>
+) 
+
+<HeaderSimple title='ListHeading' />
+
+## Overview
+
+A Heading of a ListItem component.
+
+<Canvas>
+    <Story
+    name = "Overview"
+    args = {{
+        children: 'List Heading'
+    }}>
+        { Template.bind({}) }
+    </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable story="Overview" />

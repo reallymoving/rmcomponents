@@ -1,0 +1,33 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+
+import Crumb from './Crumb'
+import HeaderSimple from '../HeaderSimple'
+
+<Meta 
+    title="Components/Breadcrumb/Crumb" 
+    component={Crumb}
+/>
+
+export const Template = args => (
+    <Crumb {...args}></Crumb>
+) 
+
+<HeaderSimple title='Crumb' />
+
+## Overview
+
+A Crumb to be used inside the Breadcrumb component.
+
+<Canvas>
+    <Story
+    name = "Overview"
+    args = {{
+        children: 'Crumb'
+    }}>
+        { Template.bind({}) }
+    </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable story="Overview" />

@@ -1,0 +1,33 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+
+import NavCollapse from './NavCollapse'
+import HeaderSimple from '../HeaderSimple'
+
+<Meta 
+    title="Components/Navigation/NavCollapse" 
+    component={NavCollapse}
+/>
+
+export const Template = args => (
+    <NavCollapse {...args}></NavCollapse>
+) 
+
+<HeaderSimple title='NavCollapse' />
+
+## Overview
+
+NavCollapse component to be used to contain a mobile nav.
+
+<Canvas>
+    <Story
+    name = "Overview"
+    args = {{
+        id: 'NavCollapse'
+    }}>
+        { Template.bind({}) }
+    </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable story="Overview" />

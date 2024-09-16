@@ -1,0 +1,43 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+import HeaderSimple from '../HeaderSimple';
+import LineIllustrationBanner from './LineIllustrationBanner';
+
+<Meta 
+    title="Components/LineIllustrationBanner" 
+    component={LineIllustrationBanner}
+    argTypes={{
+        artboard: {
+            description: 'Which artboard you want, 1-14',
+            defaultValue: 1,
+            default: 1
+        },
+        customClass: {
+        description: 'Custom class names to pass to the component'
+        },
+        id: {
+            description: 'id to pass to the banner'
+        },
+    }}
+/>
+
+export const Template = args => <LineIllustrationBanner {...args} />
+
+<HeaderSimple title='LineIllustrationBanner' />
+
+## Overview
+
+LineIllustrationBanner display's variour banners with the line art style.
+
+<Canvas>
+    <Story
+    name = "Overview"
+    args = {{
+        
+    }}>
+        { Template.bind({}) }
+    </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable story="Overview" />

@@ -1,0 +1,21 @@
+.header {
+    background-color: none;
+    width: 100%;
+    border-bottom: 1px solid #452765;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+    .btn {
+        text-align: center;
+        border: 2px solid #452765;
+        border-radius: 5px;
+        padding: 10px;
+        color: #452765;
+        font-weight: 500;
+        min-width: 140px;
+        font-family: Arial, Helvetica, sans-serif;
+}
+}

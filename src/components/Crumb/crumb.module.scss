@@ -1,0 +1,18 @@
+.crumb {
+    display: inline-block;
+
+    a {
+        color: #333;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    &::after {
+        content: '/';
+        padding-left: 4px;
+        padding-right: 2px;
+    }
+
+    &:last-of-type::after {
+        content: '';
+    }
+}

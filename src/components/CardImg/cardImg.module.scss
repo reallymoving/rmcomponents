@@ -1,0 +1,11 @@
+.CardImg {
+    img {
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        height: 240px;
+        object-fit: cover;
+        width: 100%;
+    }
+}

@@ -1,0 +1,31 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+
+import CardBody from './CardBody'
+import HeaderSimple from '../HeaderSimple'
+
+<Meta 
+    title="Components/Card/CardBody" 
+    component={CardBody}
+/>
+
+export const Template = args => <CardBody {...args}></CardBody>
+
+<HeaderSimple title='CardBody' />
+
+## Overview
+
+CardBody to used inside the Card component.
+
+<Canvas>
+    <Story
+    name = "Overview"
+    args = {{
+        children: 'Card body'
+    }}>
+        { Template.bind({}) }
+    </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable story="Overview" />

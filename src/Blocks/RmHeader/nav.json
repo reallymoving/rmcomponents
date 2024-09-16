@@ -1,0 +1,267 @@
+{
+    "links": [
+        {
+            "type": "link",
+            "name": "Home",
+            "href": "/"
+        },
+        {
+            "type": "dropdown",
+            "name": "Conveyancing",
+            "href": "/conveyancing",
+            "sublinks": [
+                {
+                    "type": "link",
+                    "name": "Get conveyancing quotes",
+                    "href": "/quote-forms/conveyancing"
+                },
+                {
+                    "type": "link",
+                    "name": "Conveyancing advice",
+                    "href": "/conveyancing/advice"
+                },
+                {
+                    "type": "link",
+                    "name": "Questions & answers",
+                    "href": "/conveyancing/questions-answers"
+                },
+                {
+                    "type": "link",
+                    "name": "Our conveyancing partners",
+                    "href": "/conveyancing/directory"
+                },
+                {
+                    "type": "link",
+                    "name": "Local conveyancing companies",
+                    "href": "/conveyancing/a-z"
+                }
+            ]
+        },
+        {
+            "type": "dropdown",
+            "name": "Surveyors",
+            "href": "/surveyors",
+            "sublinks": [
+                {
+                    "type": "link",
+                    "name": "Get quotes for surveyors",
+                    "href": "/quote-forms/surveyors"
+                },
+                {
+                    "type": "link",
+                    "name": "Surveying advice",
+                    "href": "/surveyors/advice"
+                },
+                {
+                    "type": "link",
+                    "name": "Questions & answers",
+                    "href": "/surveyors/questions-answers"
+                },
+                {
+                    "type": "link",
+                    "name": "Our surveying partners",
+                    "href": "/surveyors/directory"
+                },
+                {
+                    "type": "link",
+                    "name": "Local Building Surveyors",
+                    "href": "/surveyors/a-z"
+                },
+                {
+                    "type": "dropdown",
+                    "name": "Energy performance certificates",
+                    "href": "/energy-performance-certificates",
+                    "sublinks": [
+                        {
+                            "type": "link",
+                            "name": "Get an EPC quote",
+                            "href": "/energy-performance-certificates/get-quotes"
+                        },
+                        {
+                            "type": "link",
+                            "name": "EPC advice",
+                            "href": "/energy-performance-certificates/advice"
+                        },
+                        {
+                            "type": "link",
+                            "name": "Our EPC partners",
+                            "href": "/energy-performance-certificates/directory"
+                        }
+                    ]
+                },
+                {
+                    "type": "dropdown",
+                    "name": "Home Reports",
+                    "href": "/home-reports",
+                    "sublinks": [
+                        {
+                            "type": "link",
+                            "name": "Get Home Report quotes",
+                            "href": "/home-reports/get-quotes"
+                        },
+                        {
+                            "type": "link",
+                            "name": "Home Reports advice",
+                            "href": "/home-reports/advice"
+                        },
+                        {
+                            "type": "link",
+                            "name": "Our Home Reports partners",
+                            "href": "/home-reports/directory"
+                        },
+                        {
+                            "type": "link",
+                            "name": "Local Home Report providers",
+                            "href": "/home-reports/a-z"
+                        }
+                    ]
+                },
+                {
+                    "type": "dropdown",
+                    "name": "Valuations",
+                    "href": "/surveyors/valuations",
+                    "sublinks": [
+                        {
+                            "type": "link",
+                            "name": "Shared Ownership Valuations",
+                            "href": "/surveyors/valuations/shared-ownership"
+                        },
+                        {
+                            "type": "link",
+                            "name": "Help To Buy Valuations",
+                            "href": "/surveyors/valuations/help-to-buy"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "dropdown",
+            "name": "Removals",
+            "href": "/removals",
+            "sublinks": [
+                {
+                    "type": "link",
+                    "name": "Get removals quotes",
+                    "href": "/quote-forms/removals"
+                },
+                {
+                    "type": "link",
+                    "name": "Removals advice",
+                    "href": "/removals/advice"
+                },
+                {
+                    "type": "link",
+                    "name": "Questions & answers",
+                    "href": "/removals/questions-answers"
+                },
+                {
+                    "type": "link",
+                    "name": "Our removals partners",
+                    "href": "/removals/directory"
+                },
+                {
+                    "type": "link",
+                    "name": "Local removals companies",
+                    "href": "/removals/a-z"
+                },
+                {
+                    "type": "dropdown",
+                    "name": "International removals",
+                    "href": "/international-removals",
+                    "sublinks": [
+                        {
+                            "type": "link",
+                            "name": "International removals estimates and quotes",
+                            "href": "/international-removals/get-quotes"
+                        },
+                        {
+                            "type": "link",
+                            "name": "International removals advice",
+                            "href": "/international-removals/advice"
+                        },
+                        {
+                            "type": "link",
+                            "name": "Our international partners",
+                            "href": "/international-removals/directory"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "dropdown",
+            "name": "Help & Advice",
+            "href": "/help-and-advice",
+            "sublinks": [
+                {
+                    "type": "dropdown",
+                    "name": "First Time Buyers",
+                    "href": "/first-time-buyers",
+                    "sublinks": [
+                        {
+                            "type": "link",
+                            "name": "Advice",
+                            "href": "/first-time-buyers/advice"
+                        }
+                    ]
+                },
+                {
+                    "type": "link",
+                    "name": "FAQ",
+                    "href": "/help-and-advice/questions-answers"
+                },
+                {
+                    "type": "link",
+                    "name": "Moving advice",
+                    "href": "/help-and-advice/advice"
+                },
+                {
+                    "type": "link",
+                    "name": "Moving cost calculator",
+                    "href": "/moving-cost-calculator"
+                },
+                {
+                    "type": "link",
+                    "name": "Moving home timeline",
+                    "href": "/help-and-advice/moving-home-timeline"
+                },
+                {
+                    "type": "link",
+                    "name": "Moving Checklists",
+                    "href": "/checklists"
+                },
+                {
+                    "type": "link",
+                    "name": "Compare Estate Agent fees",
+                    "href": "/extraservice.aspx?refid=netanagent"
+                },
+                {
+                    "type": "link",
+                    "name": "Mortgages",
+                    "href": "/mortgages"
+                },
+                {
+                    "type": "link",
+                    "name": "Insurance",
+                    "href": "/quote-forms/home-insurance"
+                },
+                {
+                    "type": "link",
+                    "name": "House Price Forecast",
+                    "href": "/house-price-forecast"
+                },
+                {
+                    "type": "link",
+                    "name": "Compare energy prices",
+                    "href": "/save-money-on-energy-bill"
+                }
+            ]
+        },
+        {
+            "type": "link",
+            "name": "Blog",
+            "href": "/blog"
+        }
+    ]
+}

@@ -1,0 +1,135 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+
+import Button from './Button'
+import HeaderSimple from '../HeaderSimple'
+
+<Meta 
+    title="Components/Button" 
+    component={Button}
+    argTypes={{
+    label: {
+        description: 'The button text',
+    },
+    color: {
+      options: ['primary', 'secondary', 'trans', 'account'],
+      control: { type: 'radio' },
+      defaultValue: 'Primary',
+        description: 'The type of button',
+    table: {
+      defaultValue: { summary: 'primary' },
+    },
+    },
+    size: {
+      options: ['xs', 'sm', 'lg'],
+      control: { type: 'radio' },
+      description: 'The size of the button'
+    },
+    customClass: {
+        description: 'Custom class names to pass to the component'
+    },
+    id: {
+        description: 'id to pass to the button'
+    },
+    name: {
+        description: 'Name of the button - for form submit usages'
+    },
+    onClick: {
+        description: 'Callback function for button to trigger.'
+    }
+  }}
+/>
+
+export const Template = args => <Button {...args} />
+
+<HeaderSimple title='Button' />  
+
+## Overview
+
+Buttons allow users to trigger an action or event with a single click. For example, you can use a button for allowing the functionality of submitting a form, opening a dialog or canceling an action.
+
+<Canvas>
+    <Story
+    name = "Overview"
+    args = {{
+        label: 'Button',
+        color: 'primary',
+        size: 'sm'
+    }}>
+        { Template.bind({}) }
+    </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable story="Overview" />
+
+
+## Varients
+
+### Sizes
+<Canvas>
+    {/* bit of hack to get it to display how I want  _hidden_*/}
+    <Story
+    name = "Sizes"
+    args = {{
+        label: 'Large',
+        color: 'primary',
+        size: 'lg'
+    }}>
+        { Template.bind({}) }
+    </Story>
+    <Story
+    name = "_hidden_Small"
+    args = {{
+        label: 'Small',
+        color: 'primary',
+        size: 'sm'
+    }}>
+        { Template.bind({}) }
+    </Story>
+    <Story
+    name = "_hidden_X Small"
+    args = {{
+        label: 'X Small',
+        color: 'primary',
+        size: 'xs'
+    }}>
+        { Template.bind({}) }
+    </Story>
+</Canvas>
+
+### Kinds
+<Canvas>
+    <Story
+    name = "Kinds"
+    args = {{
+        label: 'Primary',
+        color: 'primary'
+    }}>
+        { Template.bind({}) }
+    </Story>
+    <Story
+    name = "_hidden_Secondary"
+    args = {{
+        label: 'Secondary',
+        color: 'secondary'
+    }}>
+        { Template.bind({}) }
+    </Story>
+    <Story
+    name = "_hidden_Transparent"
+    args = {{
+        label: 'Transparent',
+        color: 'trans'
+    }}>
+        { Template.bind({}) }
+    </Story>
+    <Story
+    name = "_hidden_Account"
+    args = {{
+        label: 'Account',
+        color: 'account'
+    }}>
+        { Template.bind({}) }
+    </Story>
+</Canvas>

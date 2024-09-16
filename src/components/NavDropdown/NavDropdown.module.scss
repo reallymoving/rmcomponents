@@ -1,0 +1,103 @@
+@import '../../global/styles/fonts';
+@import '../../global/styles/vars';
+@import '../../global/styles/mixins';
+
+.NavDropdown {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    .NavDropdown .dropdown {
+        left: 100%;
+        top: 0px;
+    }
+    a {
+        padding: 15px;
+        text-decoration: none;
+        &:hover {
+            + .dropdown {
+                display: block;
+            }
+            &::after {
+                color: #452765 !important;
+            }
+            @include breakpoint('md') {
+                &::after {
+                    color: #fff !important;
+                }
+            }
+        }
+        @include breakpoint('md') {
+            user-select: none;
+            &:hover {
+                +.dropdown {
+                    display: none;
+                }
+            }
+        }
+    }
+    ul {
+        padding-left: 0;
+        a {
+            padding: 10px 20px;
+            text-transform: none !important;
+        }
+        li {
+            list-style-type: none;
+        }
+    }
+}
+
+.dropdown {
+    position: absolute;
+    top: 54px;
+    left: 0;
+    white-space: nowrap;
+    display: none;
+    border: 1px solid #999;
+    //min-width: 100%;
+    a {
+        display: block;
+        width: 100%;
+    }
+    &:hover {
+        display: block;
+    }
+}
+
+
+.iconRight, .iconDown {
+    padding: 15px 0 15px 15px;
+}
+
+.iconRight::after {
+    color: $rm-pink;
+    content: "";
+    font-family: 'icomoon-icon-fonts';
+    font-size: 1.3rem;
+    vertical-align: middle;
+    padding: 0 10px 0 6px;
+    transform: rotate(270deg);
+    display: inline-block;
+    @include breakpoint('lg') {
+        display: none;
+    }
+    @include breakpoint('md') {
+        display: inline-block;
+        transform: rotate(0deg);
+    }
+}
+
+.iconDown::after {
+    content: "";
+    font-family: 'icomoon-icon-fonts';
+    font-size: 1.3rem;
+    vertical-align: middle;
+    padding: 0 10px 0 6px;
+    color: $rm-pink;
+    @include breakpoint('lg') {
+        display: none;
+    }
+    @include breakpoint('md') {
+        display: inline-block;
+    }
+}

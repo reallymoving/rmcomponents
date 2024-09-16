@@ -1,0 +1,42 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+
+import Rmicon from './Rmicon'
+import HeaderSimple from '../HeaderSimple'
+
+<Meta 
+    title="Components/Rmicon" 
+    component={Rmicon}
+    argTypes={{
+    icon: {
+        description: 'The icon you want to be used.'
+    },
+    size: {
+        description: 'The size of the icon.',
+        options: ['sm', 'md', 'lg'],
+        control: { type: 'radio' },
+        defaultValue: 'lg'
+    }
+  }}
+/>
+
+export const Template = args => <Rmicon {...args} />
+
+<HeaderSimple title='Rmicon' />
+
+## Overview
+
+Rmicons are our own custom set of icons to be used throughout the site.
+
+<Canvas>
+    <Story
+    name = "Overview"
+    args = {{
+        icon: 'removals'
+    }}>
+        { Template.bind({}) }
+    </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable story="Overview" />

@@ -1,0 +1,20 @@
+{
+    "links": [
+        {
+            "name": "About us",
+            "href": "/about-us"
+        },
+        {
+            "name": "Contact us",
+            "href": "/contact-us"
+        },
+        {
+            "name": "Join us",
+            "href": "/become-a-partner"
+        },
+        {
+            "name": "Partner login",
+            "href": "/partner-login.aspx"
+        }
+    ]
+}

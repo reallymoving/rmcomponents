@@ -1,0 +1,93 @@
+@import '../../global/styles/mixins';
+@import '../../global/styles/vars';
+
+.header {
+    a {
+        color: #666 !important;
+        font-weight: 500;
+    }
+}
+.topNavLink a {
+    &:hover {
+        text-decoration: underline;
+    }
+    font-size: 14px;
+    @include breakpoint('lg') {
+        padding: 10px 8px;
+    }
+}
+.mainNav  {
+    @include breakpoint('lg') {
+        li:first-of-type {
+            //display: none;
+        }
+    }
+    a {
+        font-weight: 500 !important;
+    }
+    @include breakpoint('md') {
+        li {
+            order: 2;
+        }
+    }
+}
+.logo {
+    width: 240px;
+    @include breakpoint('lg') {
+        width: 200px;
+    }
+    @include breakpoint('md') {
+        width: 175px;
+    }
+}
+
+.topBtn span {
+    font-size: 14px !important;
+}
+.topBtn a {
+    @include breakpoint('lg') {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.searchForm {
+    //height: fit-content;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    @include breakpoint('md') {
+        order: 0;
+        width: 100%;
+        padding: 10px 10px 0 10px;
+    }
+    
+    i {
+        font-family: 'icomoon-icon-fonts' !important;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        font-size: 16px;
+        &::before {
+            content: "";
+        }
+    }
+    button {
+        background-color: $rm-pink;
+        border-color: $rm-pink;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        &:hover {
+            background-color: $rm-pink;
+            border-color: $rm-pink;
+        }
+    }
+    input {
+        height: 36px;
+    }
+}

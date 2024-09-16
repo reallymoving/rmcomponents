@@ -1,0 +1,53 @@
+@import '../../global/styles/vars';
+
+.card {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 2px 0 #e6e6e6;
+    -moz-box-shadow: 0 2px 0 #e6e6e6;
+    box-shadow: 0 2px 0 #e6e6e6;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    font-weight: 400;
+    //height: 100%;
+    margin: 25px 0;
+    padding: 0;
+    //padding-bottom: 40px !important;
+    position: relative;
+    width: 100%;
+    font-family: "roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    h3 {
+        font-size: 1.5625em;
+        padding-bottom: 20px;
+        color: $rm-purple;
+        font-weight: 400;
+    }
+    p {
+        //margin-bottom: 45px;
+    }
+}
+
+.card.purple {
+    background: $rm-dark-purple !important;
+    color: #fff !important;
+    border: none;
+    box-shadow: none;
+    h3 {
+        color: #fff !important;
+        background: $rm-dark-purple !important;
+        border: none;
+    }
+    a {
+        color: #fff !important;
+    }
+    p {
+        color: #bfacda;
+    }
+}
+
+.imgResponsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

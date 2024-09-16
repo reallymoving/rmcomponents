@@ -1,0 +1,29 @@
+import { Canvas, Meta, Story, Source } from '@storybook/addon-docs';
+import dedent from 'ts-dedent';
+import Welcome from './components/Welcome'
+
+<Meta title="Welcome" />
+
+# Welcome
+Welcome to the **ReallyMoving** style guide. 
+
+It's important to maintain a consistent style and visual language across all areas of reallymoving. To do this, we have built the following style guide to provide consistent branding information and to document reusable components for faster product development.
+
+## What's inside
+<Welcome />
+
+## Branding
+To help keep the reallymoving branding consistent there is information and links relating to: logos, common images, banners, icons, colours etc.
+
+## Development
+This documentation represents the react component library that can be imported into any react project. You will find small components and bigger blocks that will enable you to build quick UIs.
+
+Install from the command line:
+<Source
+  language='cl'
+  dark
+  format={false}
+  code={dedent`
+     npm install @simonjduckett/rmcomponents@0.1.12
+  `}
+/>

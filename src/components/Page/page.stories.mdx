@@ -1,0 +1,33 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+
+import Page from './Page'
+import HeaderSimple from '../HeaderSimple'
+
+<Meta 
+    title="Components/Pagination/Page" 
+    component={Page}
+/>
+
+export const Template = args => (
+    <Page {...args}></Page>
+) 
+
+<HeaderSimple title='Page' />
+
+## Overview
+
+A Page to be used inside the Pagination component.
+
+<Canvas>
+    <Story
+    name = "Overview"
+    args = {{
+        children: 'Page'
+    }}>
+        { Template.bind({}) }
+    </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable story="Overview" />
